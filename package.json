@@ -1,5 +1,5 @@
 {
-  "name": "stream-cadence",
+  "name": "stream-nice",
   "private": true,
   "scripts": {
     "build": "turbo run build",
