@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import { Component, Stop, Style } from "../types";
+import { Component, Stop, Styled } from "../types";
 import { ONLY_WS } from "./_regex";
 
 /**
@@ -58,7 +58,7 @@ export const _getStopDuration = (tok: string, stops?: Stop[]) => {
  */
 export const _extractTokStyles = (
   tok: string,
-  styles?: Style[]
+  styles?: Styled[]
 ): { styledTok: string; styled: CSSProperties | null } => {
   if (!styles?.length) return { styledTok: tok, styled: null };
 
