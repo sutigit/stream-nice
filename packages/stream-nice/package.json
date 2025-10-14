@@ -2,21 +2,26 @@
   "name": "@repo/stream-nice",
   "type": "module",
   "scripts": {
-    "dev": "tsc --watch",
-    "build": "tsc"
+    "build": "rollup --config"
   },
   "exports": {
     "./add": {
       "types": "./src/add.ts",
       "default": "./dist/add.js"
     },
-    "./subtract": {
-      "types": "./src/subtract.ts",
-      "default": "./dist/subtract.js"
+    "./Button": {
+      "types": "./src/Button.ts",
+      "default": "./dist/button.js"
     }
   },
   "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@rollup/plugin-typescript": "^12.1.4",
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.1",
+    "eslint": "^9.34.0",
+    "rollup": "^4.52.4",
     "typescript": "latest"
   },
   "dependencies": {
