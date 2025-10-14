@@ -13,6 +13,8 @@ import { STOPS, STREAM } from "@/lib/StreamNice/enums";
 import { RegMatch, RegPrefix, RegStem } from "@/lib/StreamNice/utils";
 import { InStreamComponent, InStreamComponents, StreamConfig } from "@/lib/StreamNice/types";
 
+import { add } from '@repo/stream-nice/add'
+
 import colors from "tailwindcss/colors"
 
 const config: StreamConfig = {
@@ -59,6 +61,12 @@ export default function Home() {
     const [input, setInput] = useState<string>("");
     const scrollRef = useRef<HTMLDivElement>(null);
 
+    const [sum, setSum] = useState<number>(0)
+
+    const handleAdd = () => {
+        setSum(prev => add(prev, 1))
+    }
+
     const { next, setNext, streamReader } = useStreamNice(config)
     useScroll(scrollRef, next)
 
@@ -89,6 +97,7 @@ export default function Home() {
 
     return (
         <main className="container mx-auto h-screen max-h-screen min-h-screen flex flex-col">
+            <Button onClick={handleAdd}>{sum}</Button>
             <div
                 className="h-2/3 bg-indigo-300/3 p-10 rounded-2xl flex my-10 overflow-y-scroll whitespace-pre-wrap pr-8 scroll-bar"
                 ref={scrollRef}

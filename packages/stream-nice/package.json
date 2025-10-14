@@ -18,5 +18,8 @@
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
     "typescript": "latest"
+  },
+  "dependencies": {
+    "react": "^19.1.0"
   }
 }

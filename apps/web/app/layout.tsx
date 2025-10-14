@@ -7,8 +7,8 @@ import { GitBranch } from "lucide-react";
 const font = Funnel_Sans({ subsets: ['latin'], weight: ['300', '400', '600', '700', '800'] })
 
 export const metadata: Metadata = {
-  title: "Stream cadence",
-  description: "Stream your text with natural human speech-like cadence",
+  title: "StreamNice",
+  description: "AI message streaming library",
 };
 
 export default function RootLayout({
@@ -27,7 +27,7 @@ export default function RootLayout({
             <Link href="/">Examples</Link>
           </div>
           <Link
-            href="https://github.com/sutigit/stream-cadence"
+            href="https://github.com/sutigit/stream-nice"
             target="_blank"
             className="flex items-center gap-1 font-bold"
           >
