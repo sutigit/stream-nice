@@ -48,7 +48,7 @@ export interface InStreamComponent {
 
 export type InStreamComponents = Record<string, FC<InStreamComponent>>;
 
-export type StreamNiceProps = React.HTMLAttributes<HTMLSpanElement> & {
+export type StreamNiceOutputProps = React.HTMLAttributes<HTMLSpanElement> & {
   next: Next | null;
   inStream?: InStreamComponents;
 };

@@ -1,13 +1,17 @@
 import { cn } from '@/lib/utils'
 import { Slider } from "@/components/ui/slider"
 import { Switch } from "@/components/ui/switch"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function Header() {
     const [cadence, setCadence] = useState<boolean>(true)
     const [highlights, setHighlights] = useState<boolean>(true)
     const [interactions, setInteractions] = useState<boolean>(true)
     const [speed, setSpeed] = useState<number>(70)
+
+    useEffect(() => {
+
+    }, [cadence, highlights, interactions, speed])
 
     return (
         <>

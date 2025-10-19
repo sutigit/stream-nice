@@ -1,4 +1,4 @@
-import { Component, InternalSeg, Next, StreamNiceProps, Styled } from "./types"
+import { Component, InternalSeg, Next, StreamNiceOutputProps, Styled } from "./types.js"
 import "./nice.css"
 import { memo, ReactNode, useEffect, useState } from "react"
 
@@ -14,7 +14,7 @@ import { memo, ReactNode, useEffect, useState } from "react"
 // - streaming style -> smooth | word and default
 
 
-const StreamNice: React.FC<StreamNiceProps> = ({ next, inStream, ...rest }) => {
+const StreamNiceOutput: React.FC<StreamNiceOutputProps> = ({ next, inStream, ...rest }) => {
 
     const defineComponent = (componentId: string, target: string) => {
         const Component = inStream?.[componentId]
@@ -116,4 +116,4 @@ const StreamNice: React.FC<StreamNiceProps> = ({ next, inStream, ...rest }) => {
     )
 }
 
-export default StreamNice
+export default StreamNiceOutput
