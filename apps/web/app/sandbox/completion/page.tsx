@@ -15,6 +15,8 @@ import { InStreamComponent, InStreamComponents, StreamConfig } from "@/lib/Strea
 
 import { add } from '@repo/stream-nice/add'
 
+// import Button from '@repo/stream-nice/Button'
+
 import colors from "tailwindcss/colors"
 
 const config: StreamConfig = {

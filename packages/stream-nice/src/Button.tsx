@@ -1,5 +1,5 @@
-export default function Button() {
+export default function Button({ children }: { children: any }) {
     return (
-        <button>Button</button>
+        <button>{children}</button>
     )
 }
